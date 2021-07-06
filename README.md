@@ -1,2 +1,2 @@
 # Sites_Static
-Somente layout de sites
+Esse repositório é de layout de páginas estatícas, com html,css e javaScript
