@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" >
+	<script type="text/javascript" src="index.js"></script>
+    <title>Login</title>
+</head>
+<body>
+	<main>
+		<div class = "windows">
+			<div class = "painel">
+				<div class = "titulo">
+					<h1>Sign To Your Account</h1>
+				</div>
+				<div class = "empty"></div>
+				<div class = "caixas">
+					<div class="largura">
+						<div class = "e l">
+							<label class="nameuser" for="username">Username:</label><br>
+							<input type="text" id="username" placeholder="Username">
+						</div>
+						<div class = "e l">
+							<label class="nameuser" for="password">Password:</label><br>
+							<input type="password" id="password" placeholder="Password">
+						</div>
+						<div class = "e">
+							<input type="checkbox" name="">
+							<span>Remember Me</span>
+						</div>
+						<div class = "s" >
+							<input type="submit" name="" value="Submit">
+						</div>
+					</div>
+				</div>
+				<center><div id="t"></div></center>
+			</div>
+		</div>
+	</main>	
+	<script type="text/javascript" src="vanilla-tilt.js"></script>
+	<script>
+		VanillaTilt.init(document.querySelector(".painel"), {
+		max: 7,
+		speed: 500,
+		//reverse: true,
+	});
+	
+	</script>
+</body>
+</html>
