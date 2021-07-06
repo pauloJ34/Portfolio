@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Formulário</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+		<main class="corpo">
+		<div class="formulario">
+			<div class="conteudo">
+
+				<form action=" http://ip.ifrn.edu.br/sirab/send.php" method="post">
+					<div class="campusNormal">
+						<input type="text" name="nome" id="nome" required="" /><br/>
+						<label for="nome">Nome</label>
+					</div>
+					<div class="campusNormal">
+						<input type="text" name="cpf" id="cpf" required=""/><br/>
+						<label for="cpf">CPF</label>
+					</div>
+
+					<span class="dn">Data de Nascimento</span>
+					<input type="date" name="dataDeNascimento" id="dn"/>
+
+					<div class="campusNormal">
+						<input type="text" name="email" id="email" required=""/><br/>
+						<label for="email">Email</label>
+					</div>
+					<div class="campusNormal">
+						<input type="password" name="senha" id="senha" required=""/><br/>
+						<label for="senha">Senha</label>
+					</div>
+					<span class="sexo">Sexo:</span><br>
+					<div class="sexo-radio">
+						<input type="radio" name="sexo" Value="Masculino" id="M"/>
+						<label for="M">Masculino</label>
+						<input type="radio" name="sexo" Value="Feminino" id="F"/>
+						<label for="F">Feminino</label>
+						<input type="radio" name="sexo" Value="Não_Definido" id="N"/>
+						<label for="N">Não Definido</label><br/>
+					</div>
+					<select name="estado_civil">
+						<option disabled selected hidden>Estado Civil</option>
+						<option value="Solteiro">Solteiro</option>
+						<option value="Divorciado">Divorciado</option>
+						<option value="Viúvo">Viúvo</option>
+					</select>
+					<br/>
+					<select name="linguagem_de_Programacao_favorito">
+						<option disabled selected hidden>Linguagem de programação</option>
+						<option value="JavaScript">JavaScript</option>
+						<option value="Python">Python</option>
+						<option value="C">C</option>
+						<option value="C++">C++</option>
+						<option value="C#">C#</option>
+						<option value="Java">Java</option>
+						<option value="PHP">PHP</option>
+						<option value="Rust">Rust</option>
+						<option value="Ruby">Ruby</option>
+						<option value="Lua">Lua</option>
+						<option value="SQL">SQL</option>
+					</select>
+					<br/>
+
+					<input type="submit" class="enviar" value="Enviar">
+				</form>
+			</div>
+		</div>
+    <script src="script.js"></script>
+  </body>
+</html>
