@@ -45,10 +45,10 @@ main::after{
 
 @keyframes mover{
 	to{
-		top: 100%;
+		top: 105%;
 	}
 	from{
-		top: -50%;
+		top: -105%;
 	}
 
 }
