@@ -27,7 +27,7 @@ main::before{
 	height: 40vw;
 	border-radius: 50%;
 	background: linear-gradient(rgb(20, 0, 51),rgb(0, 155, 175));
-	animation: mover 10s ease-in-out infinite reverse;
+	animation: mover 25s linear infinite ;
 /*	clip-path: circle(25% at 70% 25%);
 	animation: rodacao 2s linear infinite;*/
 }
@@ -40,43 +40,15 @@ main::after{
 	height: 25vw;
 	border-radius: 50%;
 	background: linear-gradient(rgb(0, 255, 203) 1%,rgb(76, 0, 255) 70%);
-	animation: mover2 15s ease-in infinite;
+	animation: mover 15s linear infinite reverse;
 }
 
 @keyframes mover{
-	0%{
-		top: -20%;
+	to{
+		top: 100%;
 	}
-	50%{
-		top: 75%;
-	}
-	100%{
-		top:-20%;
-	}
-}
-@keyframes mover2{
-	0%{
-		width: 30vw;
-		height: 20vw;
-		top: 85%;
-	}
-	46%{
-		width: 20vw;
-		height: 30vw;
-	}
-	50%{
-		width: 30vw;
-		height: 20vw;
-		top: -20%;
-	}
-	96%{
-		width: 20vw;
-		height: 30vw;
-	}
-	100%{
-		width: 30vw;
-		height: 20vw;
-		top: 85%;
+	from{
+		top: -50%;
 	}
 
 }
