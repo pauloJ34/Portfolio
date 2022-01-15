@@ -27,27 +27,60 @@ main::before{
 	height: 40vw;
 	border-radius: 50%;
 	background: linear-gradient(rgb(20, 0, 51),rgb(0, 155, 175));
+	animation: mover 10s ease-in-out infinite reverse;
 /*	clip-path: circle(25% at 70% 25%);
 	animation: rodacao 2s linear infinite;*/
 }
 main::after{
 	content: '';
 	position: absolute;
-	bottom: -10%;
+	top: 75%;
 	left: 0;
 	width: 25vw;
 	height: 25vw;
 	border-radius: 50%;
 	background: linear-gradient(rgb(0, 255, 203) 1%,rgb(76, 0, 255) 70%);
+	animation: mover2 15s ease-in infinite;
 }
-@keyframes rodacao{
+
+@keyframes mover{
 	0%{
-		transform: rotate(0deg);
+		top: -20%;
+	}
+	50%{
+		top: 75%;
 	}
 	100%{
-		transform: rotate(360deg);
+		top:-20%;
 	}
 }
+@keyframes mover2{
+	0%{
+		width: 30vw;
+		height: 20vw;
+		top: 85%;
+	}
+	46%{
+		width: 20vw;
+		height: 30vw;
+	}
+	50%{
+		width: 30vw;
+		height: 20vw;
+		top: -20%;
+	}
+	96%{
+		width: 20vw;
+		height: 30vw;
+	}
+	100%{
+		width: 30vw;
+		height: 20vw;
+		top: 85%;
+	}
+
+}
+
 .windows{
 	position: relative;
 	display: flex;
