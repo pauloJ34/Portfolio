@@ -28,7 +28,7 @@ async function render(req, res){
 		arquivoPadrao="index.html";
 	}
 	//console.log("."+pastaDefault+arquivo+arquivoPadrao);
-	const page=(__dirname+pastaDefault+arquivo+arquivoPadrao).replaceAll("\\","/");
+	const page=(__dirname.replace('\\src','')+pastaDefault+arquivo+arquivoPadrao).replaceAll("\\","/");
 	console.log(page);
 	fs.readFile(page ,(erro, pageRes)=>{
 		if (erro) {
