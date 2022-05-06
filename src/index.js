@@ -27,15 +27,13 @@ async function render(req, res){
 	if(arquivo.split('.').length==1){
 		arquivoPadrao="index.html";
 	}
-	//console.log("."+pastaDefault+arquivo+arquivoPadrao);
 	const page=((__dirname+pastaDefault+arquivo+arquivoPadrao).replaceAll("\\","/")).replace('/src','');
 	console.log(page);
 	fs.readFile(page ,(erro, pageRes)=>{
 		if (erro) {
 	    res.writeHead(404);
-	    //res.write();
-	    res.write(erro.toString())
-	   	//res.write('Contents you are looking are Not Found');
+	    //res.write(erro.toString())
+	   	res.write('Contents you are looking are Not Found');
 		}
 		else if(map["."+page.split('.')[1]]===undefined){
 			res.writeHead(404);
