@@ -4,7 +4,7 @@
   "description": "<br>\r <p>Ainda está em desenvolvimento, então não estranhe se estiver faltando algo.<br><strong>Link:</strong> <a href=\"https://portfolio-pauloj34.vercel.app\">Site</a></p>",
   "main": "src\\index.js",
   "scripts": {
-    "dev": "node src/index.js",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
