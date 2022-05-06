@@ -32,17 +32,17 @@ async function render(req, res){
 	console.log(page)
 	fs.readFile(page ,(erro, pageRes)=>{
 		if (erro) {
-		    res.writeHead(404);
-		    res.write(erro);
-		    //res.write('Contents you are looking are Not Found');
+	    res.writeHead(404);
+	    res.write(erro.toString());
+	    //res.write('Contents you are looking are Not Found');
 		}
 		else if(map["."+page.split('.')[2]]===undefined){
 			res.writeHead(404);
-		    res.write('Content you are looking for cannot be Accessed.');
+		  res.write('Content you are looking for cannot be Accessed.');
 		}
 		else {
-		    res.writeHead(200, { 'Content-Type': map["."+page.split('.')[2]] });
-		    res.write(pageRes);
+	    res.writeHead(200, { 'Content-Type': map["."+page.split('.')[2]] });
+	    res.write(pageRes);
 		}
 		res.end();
 	});
