@@ -7,7 +7,7 @@ http.createServer((req, res)=>{
 }).listen(port,"0.0.0.0",()=>{	console.log(`rodando: localhost:${port}`);	});
 
 async function render(req, res){
-	const pastaDefault="/static";
+	const pastaDefault="/STATIC";
 	const arquivo=req.url;
 	let arquivoPadrao="";
 	const map = {
@@ -28,20 +28,20 @@ async function render(req, res){
 		arquivoPadrao="index.html";
 	}
 	//console.log("."+pastaDefault+arquivo+arquivoPadrao);
-	const page="."+pastaDefault+arquivo+arquivoPadrao;
-	console.log(page)
+	const page=(__dirname+pastaDefault+arquivo+arquivoPadrao).replaceAll("\\","/");
+	console.log(page);
 	fs.readFile(page ,(erro, pageRes)=>{
 		if (erro) {
 	    res.writeHead(404);
-	    res.write(erro.toString());
-	    //res.write('Contents you are looking are Not Found');
+	    //res.write();
+	   	res.write('Contents you are looking are Not Found');
 		}
-		else if(map["."+page.split('.')[2]]===undefined){
+		else if(map["."+page.split('.')[1]]===undefined){
 			res.writeHead(404);
 		  res.write('Content you are looking for cannot be Accessed.');
 		}
 		else {
-	    res.writeHead(200, { 'Content-Type': map["."+page.split('.')[2]] });
+	    res.writeHead(200, { 'Content-Type': map["."+page.split('.')[1]] });
 	    res.write(pageRes);
 		}
 		res.end();
