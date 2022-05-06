@@ -28,7 +28,7 @@ async function render(req, res){
 		arquivoPadrao="index.html";
 	}
 	//console.log("."+pastaDefault+arquivo+arquivoPadrao);
-	const page="../"+pastaDefault+arquivo+arquivoPadrao;
+	const page="."+pastaDefault+arquivo+arquivoPadrao;
 	console.log(page)
 	fs.readFile(page ,(erro, pageRes)=>{
 		if (erro) {
