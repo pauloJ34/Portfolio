@@ -4,7 +4,7 @@ const port= 3002;
 
 http.createServer((req, res)=>{
 	render(req, res);
-}).listen(port,()=>{	console.log("radando: localhost:8080");	});
+}).listen(port,()=>{	console.log(`radando: localhost:${port}`);	});
 
 async function render(req, res){
 	const pastaDefault="/static";
