@@ -33,6 +33,7 @@ async function render(req, res){
 	fs.readFile(page ,(erro, pageRes)=>{
 		if (erro) {
 		    res.writeHead(404);
+		    res.write(erro);
 		    res.write('Contents you are looking are Not Found');
 		}
 		else if(map["."+page.split('.')[2]]===undefined){
