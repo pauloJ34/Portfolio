@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "<br>\r <p>Ainda está em desenvolvimento, então não estranhe se estiver faltando algo.<br><strong>Link:</strong> <a href=\"https://portfolio-pauloj34.vercel.app\">Site</a></p>",
+  "main": "src\\index.js",
+  "scripts": {
+    "dev": "node src\\index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauloJ34/Portfolio.git"
+  },
+  "author": "Paulo Franklin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pauloJ34/Portfolio/issues"
+  },
+  "homepage": "https://github.com/pauloJ34/Portfolio#readme"
+}
