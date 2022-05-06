@@ -34,7 +34,8 @@ async function render(req, res){
 		if (erro) {
 	    res.writeHead(404);
 	    //res.write();
-	   	res.write('Contents you are looking are Not Found');
+	    res.write(erro.toString())
+	   	//res.write('Contents you are looking are Not Found');
 		}
 		else if(map["."+page.split('.')[1]]===undefined){
 			res.writeHead(404);
