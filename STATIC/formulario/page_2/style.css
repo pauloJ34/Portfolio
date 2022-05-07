@@ -7,15 +7,19 @@
 	box-sizing: border-box;
 }
 body{
-	overflow-y: hidden;
+	/*overflow-y: hidden;*/
 }
 main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: #0080ff;
-	height: 100%;
-	width: 100%;
+	/*height: 100%;*/
+	min-height: 100vh;
+	height: max-content;
 	background-image: radial-gradient(#003566,#00284d,#001a33);
 	background-size: cover;
-	overflow-y: hidden;
+	/*overflow-y: hidden;*/
 	/*background-repeat: no-repeat;*/
 }
 main::before{
@@ -56,18 +60,17 @@ main::after{
 .windows{
 	position: relative;
 	display: flex;
-	height: 100vh;
+	min-height: 100vh;
+	height: max-content;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	z-index: 1;
 }
 .painel{
-	width: 35vw;
+	width: 80vw;
 	color: rgba(255, 255, 255, 0.6);
 	max-width: 500px;
-	max-height: 500px;
-	min-width: 370px;
 	/*height: 90vh;*//*tirar depois*/
 	border-top: solid 1px rgba(255,255, 255, 0.5);
 	border-left: solid 1px rgba(255,255, 255, 0.5);
@@ -79,30 +82,39 @@ main::after{
 }
 .titulo{
 	position: relative;
-	color:rgba(255, 255, 255, 0.8);
-	display: inline-block;
+	color:#fff;
+	display: flex;
+	justify-content: center;
 	margin-top: 5%;
-	margin-left: 10%;
+	width: 100%;
 } 
-.titulo::after{
+.titulo h1{
+	position: relative;
+	text-align: center;
+}
+.titulo h1::after{
 	content:'';
 	position: absolute;
 	/*top: 110px;*//*é para ficar de baixo da linha*/
 	left: 0;
+	bottom: 2px;
 	width: 15%;
-	height: 0.2em;
-	background-color: rgba(255, 255, 255, 0.8);
+	height: 3px;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 .empty{
 	margin-bottom: 15%;
 }
 .caixas{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	font-size: 16px;
 }
 .largura{
+
 	width: 50%;
-	margin:auto;
 }
 .nameuser{
 	font-weight: 500;
@@ -120,19 +132,22 @@ input:focus{
 }
 .e{/*space*/
 	/*margin-left: 31%;*/
+	width: 100%;
 	margin-bottom: 5%;
 	font-size: 14px;
 }
 .e .remember{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-bottom: 20%;
 }
 .e input[type="checkbox" i]{
-
-	margin-left: 5px;
-	width: 13px;
-	
+	margin-right: 5px;
+	width: auto;
 }
-.e span{
+
+.e label{
 	color: #fff;
 }
 .l input{
@@ -149,12 +164,14 @@ input:focus{
 	border-color: #0080ff;
 }
 .s{/*submit*/
+	width: 100%;
 	text-align: center;
 }
 .s input{
 	font-weight: 500;
-	padding: 3px 0px 3px 0px;
-	width: 150px;
+	padding: 3px 0;
+	width: 70%;
+	min-width: 100px;
 	margin-bottom: 20%;
 	border-radius: 20px;
 	border: 2px solid rgba(0, 0, 0, 0.2);

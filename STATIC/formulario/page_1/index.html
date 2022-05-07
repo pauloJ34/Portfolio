@@ -20,9 +20,10 @@
 						<input type="text" name="cpf" id="cpf" required=""/><br/>
 						<label for="cpf">CPF</label>
 					</div>
-
-					<span class="dn">Data de Nascimento</span>
-					<input type="date" name="dataDeNascimento" id="dn"/>
+					<div class="campusNormal">
+						<span class="dn">Data de Nascimento</span>
+						<input type="date" name="dataDeNascimento" id="dn"/>
+					</div>
 
 					<div class="campusNormal">
 						<input type="text" name="email" id="email" required=""/><br/>
@@ -34,12 +35,12 @@
 					</div>
 					<span class="sexo">Sexo:</span><br>
 					<div class="sexo-radio">
-						<input type="radio" name="sexo" Value="Masculino" id="M"/>
-						<label for="M">Masculino</label>
-						<input type="radio" name="sexo" Value="Feminino" id="F"/>
-						<label for="F">Feminino</label>
-						<input type="radio" name="sexo" Value="Não_Definido" id="N"/>
-						<label for="N">Não Definido</label><br/>
+						<div class="block"><input type="radio" name="sexo" Value="Masculino" id="M"/>
+						<label for="M">Masculino</label></div>
+						<div class="block"><input type="radio" name="sexo" Value="Feminino" id="F"/>
+						<label for="F">Feminino</label></div>
+						<div class="block"><input type="radio" name="sexo" Value="Não_Definido" id="N"/>
+						<label for="N">Não Definido</label></div><br/>
 					</div>
 					<select name="estado_civil">
 						<option disabled selected hidden>Estado Civil</option>
