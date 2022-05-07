@@ -9,7 +9,7 @@ http.createServer((req, res)=>{
 async function render(req, res){
 	const pastaDefault="/STATIC";
 	const arquivo=req.url;
-	let arquivoPadrao="";
+	const arquivoPadrao = arquivo.split('.').length==1 ? "index.html" : "";
 	const map = {
     '.ico':		'image/x-icon',
     '.html':	'text/html',
@@ -24,9 +24,7 @@ async function render(req, res){
     '.pdf': 	'application/pdf',
 	   //'.doc': 'application/msword',
   };
-	if(arquivo.split('.').length==1){
-		arquivoPadrao="index.html";
-	}
+
 	const page=((__dirname+pastaDefault+arquivo+arquivoPadrao).replaceAll("\\","/")).replace('/src','');
 	console.log(page);
 	fs.readFile(page ,(erro, pageRes)=>{
@@ -40,7 +38,7 @@ async function render(req, res){
 		  res.write('Content you are looking for cannot be Accessed.');
 		}
 		else {
-	    res.writeHead(200, { 'Content-Type': map["."+page.split('.')[1]] });
+	    res.writeHead(200, { 'Content-Type': map[`.${page.split('.')[1]}`] });
 	    res.write(pageRes);
 		}
 		res.end();
