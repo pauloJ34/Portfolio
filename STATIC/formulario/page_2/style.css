@@ -6,9 +6,7 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-body{
-	/*overflow-y: hidden;*/
-}
+
 main{
 	display: flex;
 	justify-content: center;
